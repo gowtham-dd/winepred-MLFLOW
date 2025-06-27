@@ -3,7 +3,9 @@ from src.WinePredMLflow.pipeline.data_ingestion_pipeline import DataIngestionTra
 from src.WinePredMLflow.pipeline.data_validation_pipeline import DataValidationTrainingPipeline
 from src.WinePredMLflow.pipeline.data_transformation_pipeline import DataTransformationTrainingPipeline
 from src.WinePredMLflow.pipeline.model_trainer_pipeline import ModelTrainerTrainingPipeline
-
+from src.WinePredMLflow.pipeline.model_evaluation_pipeline import ModelEvaluationTrainingPipeline
+import dagshub
+dagshub.init(repo_owner='gowtham-dd', repo_name='winepred-MLFLOW', mlflow=True)
 
 
 STAGE_NAME="Data Ingestion stage"
@@ -59,3 +61,14 @@ except Exception as e:
         logger.exception(e)
         raise e
 
+
+
+STAGE_NAME = "Model evaluation stage"
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+   data_ingestion = ModelEvaluationTrainingPipeline()
+   data_ingestion.main()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e

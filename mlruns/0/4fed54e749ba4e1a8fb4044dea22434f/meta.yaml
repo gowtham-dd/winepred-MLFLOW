@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/END%20to%20END%20Proj/WinePred/winepred-MLFLOW/mlruns/0/4fed54e749ba4e1a8fb4044dea22434f/artifacts
+end_time: 1751017230029
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4fed54e749ba4e1a8fb4044dea22434f
+run_name: nosy-crane-220
+run_uuid: 4fed54e749ba4e1a8fb4044dea22434f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751017209823
+status: 3
+tags: []
+user_id: dell
